@@ -10,8 +10,9 @@ class PostController extends ChangeNotifier {
 
   List<PostEntity> get posts => postModel.posts;
 
-  Future<void> getPosts () async {
+  Future<bool> getPosts () async {
     await postModel.getPosts();
+    return true;
   }
 
 }

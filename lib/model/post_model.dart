@@ -8,6 +8,7 @@ class PostModel {
       'https://jsonplaceholder.typicode.com/posts',
     );
     List data = response.data;
+    print(response.data);
     posts = data.map((v) => PostEntity.fromApi(v)).toList();
   }
 }
